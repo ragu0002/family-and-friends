@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme inline {
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
+  --my-grid-rows: auto 1fr auto;
+  --my-grid-cols: [full-start]1fr [content-start]minmax(0, 375px) [content-end]
+    1fr [full-end];
+  --content-col: content;
+  --my-list-grid: repeat(auto-fit, minmax(140px, 1fr));
 }

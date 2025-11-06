@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme inline {
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -4,16 +4,16 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="col-(--content-col) grid">
-      <header>
+    <>
+      <header className="col-(--content-col) grid grid-cols-subgrid">
         <Header></Header>
       </header>
-      <main>
+      <main className="col-(--full-col) grid grid-cols-subgrid">
         <AnimalList></AnimalList>
       </main>
-      <footer>
+      <footer className="col-(--full-col) grid grid-cols-subgrid">
         <Footer></Footer>
       </footer>
-    </div>
+    </>
   );
 }

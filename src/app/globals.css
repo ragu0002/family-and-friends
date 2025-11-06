@@ -5,5 +5,8 @@
   --my-grid-cols: [full-start]1fr [content-start]minmax(0, 375px) [content-end]
     1fr [full-end];
   --content-col: content;
+  --content-width: 375px;
+  --full-col: full;
   --my-list-grid: repeat(auto-fit, minmax(140px, 1fr));
+  --scroll-padding: max(1rem, 50% - var(--content-width) / 2);
 }

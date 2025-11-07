@@ -8,5 +8,20 @@
   --content-width: 375px;
   --full-col: full;
   --my-list-grid: repeat(auto-fit, minmax(140px, 1fr));
-  --scroll-padding: max(1rem, 50% - var(--content-width) / 2);
+  --color-type-red: #eda8b3;
+  --color-type-green: #c5e59c;
+  --color-type-blue: #acd7ff;
+  --color-type-yellow: #f1e689;
+  --color-text-green: #6b8b42;
+}
+@layer components {
+  .scroll-container {
+    --scroll-padding: max(1rem, 50% - 375px / 2);
+    grid-column: 1/-1;
+    scroll-snap-type: x mandatory;
+    overflow: auto;
+    overflow-x: auto;
+    padding-inline: var(--scroll-padding);
+    scroll-padding-inline: var(--scroll-padding);
+  }
 }

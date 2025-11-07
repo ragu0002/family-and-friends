@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaRegStar } from "react-icons/fa";
+import { IoIosArrowBack } from "react-icons/io";
 import TypeButton from "./TypeButtom";
 const AnimalSingle = () => {
   return (
@@ -13,8 +15,13 @@ const AnimalSingle = () => {
           height={500}
           className="col-1 row-1 aspect-square rounded-4xl object-cover"
         ></Image>
+        <div className="col-1 row-1 justify-self-start p-3">
+          <Link href="/">
+            <IoIosArrowBack size={40} />
+          </Link>
+        </div>
         <div className="col-1 row-1 justify-self-end p-3">
-          <FaRegStar size={20} />
+          <FaRegStar size={40} />
         </div>
       </figure>
       <h1 className="py-3 text-4xl font-semibold">Mira Pusen</h1>

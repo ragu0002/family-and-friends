@@ -1,5 +1,6 @@
 import AnimalFilter from "./AnimalFilter";
 import AnimalCard from "./AnimalCard";
+import AnimalCardDynamic from "./AnimalCardDynamic";
 
 const AnimalList = () => {
   return (
@@ -9,10 +10,7 @@ const AnimalList = () => {
       </div>
       <div className="col-(--content-col) grid grid-cols-subgrid">
         <div className="grid grid-cols-(--my-list-grid) justify-between gap-3 py-5">
-          <AnimalCard></AnimalCard> <AnimalCard></AnimalCard>{" "}
-          <AnimalCard></AnimalCard> <AnimalCard></AnimalCard>{" "}
-          <AnimalCard></AnimalCard> <AnimalCard></AnimalCard>{" "}
-          <AnimalCard></AnimalCard> <AnimalCard></AnimalCard>
+          <AnimalCardDynamic></AnimalCardDynamic>
         </div>
       </div>
     </div>

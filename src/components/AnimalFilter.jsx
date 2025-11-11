@@ -1,14 +1,10 @@
 import FilterButton from "./FilterButton";
+import FilterButtonDynamic from "./FilterButtonDynamic";
 
 const AnimalFilter = () => {
   return (
     <div className="scroll-container flex gap-3">
-      <FilterButton name="All"></FilterButton>
-      <FilterButton name="Dogs"></FilterButton>
-      <FilterButton name="Cats"></FilterButton>
-      <FilterButton name="Cats"></FilterButton>
-      <FilterButton name="Cats"></FilterButton>
-      <FilterButton name="Cats"></FilterButton>
+      <FilterButtonDynamic></FilterButtonDynamic>
     </div>
   );
 };

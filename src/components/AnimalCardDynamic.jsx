@@ -3,17 +3,21 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaRegStar } from "react-icons/fa";
 
-const AnimalCardDynamic = () => {
+const AnimalCardDynamic = ({ category }) => {
   return (
     <Suspense fallback={<div>Loading products...</div>}>
-      <FetchProduct />
+      <FetchProduct category={category} />
     </Suspense>
   );
 };
-const FetchProduct = async () => {
+const FetchProduct = async ({ category }) => {
   "use server";
-  const response = await fetch("https://dummyjson.com/products");
+  const url = category
+    ? `https://dummyjson.com/products/category/${category}`
+    : `https://dummyjson.com/products`;
+  const response = await fetch(url);
   const { products } = await response.json();
+  console.log(category);
   return products.map((product) => (
     <Link
       href={`/detalje/${product.id}`}

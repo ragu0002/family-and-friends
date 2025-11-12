@@ -4,7 +4,7 @@ import AnimalCardDynamic from "./AnimalCardDynamic";
 
 const AnimalList = ({ category }) => {
   return (
-    <div className="col-(--full-col) grid grid-cols-subgrid">
+    <div className="col-(--full-col) grid grid-cols-subgrid pb-20">
       <div className="col-(--full-col)">
         <AnimalFilter category={category}></AnimalFilter>
       </div>

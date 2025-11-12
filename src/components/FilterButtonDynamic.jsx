@@ -2,10 +2,10 @@ import { Suspense } from "react";
 import Image from "next/image";
 import FilterElement from "./FilterElement";
 
-const FilterButtonDynamic = () => {
+const FilterButtonDynamic = ({ category }) => {
   return (
     <Suspense fallback={<div>Loading products...</div>}>
-      <FetchCategories />
+      <FetchCategories category={category} />
     </Suspense>
   );
 };

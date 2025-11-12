@@ -13,6 +13,8 @@
   --color-type-blue: #acd7ff;
   --color-type-yellow: #f1e689;
   --color-text-green: #6b8b42;
+  --color-button-pink: #f2968f;
+  --color-button-gray: #cacacd;
 }
 @layer components {
   .scroll-container {

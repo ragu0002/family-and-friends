@@ -6,7 +6,7 @@ const AnimalList = ({ category }) => {
   return (
     <div className="col-(--full-col) grid grid-cols-subgrid">
       <div className="col-(--full-col)">
-        <AnimalFilter></AnimalFilter>
+        <AnimalFilter category={category}></AnimalFilter>
       </div>
       <div className="col-(--content-col) grid grid-cols-subgrid">
         <div className="grid grid-cols-(--my-list-grid) justify-between gap-3 py-5">

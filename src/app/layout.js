@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`grid-rows(--my-grid-rows) grid grid-cols-(--my-grid-cols) px-1.5 ${manrope.className}`}
+        className={`grid-rows(--my-grid-rows) grid min-h-screen grid-cols-(--my-grid-cols) px-1.5 ${manrope.className}`}
       >
         {children}
       </body>

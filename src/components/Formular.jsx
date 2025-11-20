@@ -17,7 +17,7 @@ const Formular = () => {
         )}
         <input
           type="text"
-          className="rounded-xl border border-black p-3 text-center"
+          className="rounded-xl border border-black p-3 text-center capitalize"
           name="productname"
           defaultValue={state.productName}
           placeholder="Animal Name"

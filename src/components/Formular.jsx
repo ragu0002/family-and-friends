@@ -27,7 +27,6 @@ const Formular = () => {
           <p className="text-red-500">{state.error.productNumber}</p>
         )}
         <input
-          type="number"
           className="rounded-xl border border-black p-3 text-center"
           name="productnumber"
           defaultValue={state.productNumber}

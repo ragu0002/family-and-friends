@@ -1,7 +1,15 @@
 "use server";
 
+import { resolve } from "styled-jsx/css";
+
 export const submitAnimal = async (prevState, formData) => {
+  const state = {
+    succes: null,
+    error: {},
+  };
+
   const error = {};
+
   const productName = formData.get("productname");
   const productNumber = formData.get("productnumber");
   const productDescription = formData.get("productdescription");
@@ -35,6 +43,18 @@ export const submitAnimal = async (prevState, formData) => {
   if (Object.keys(error).length > 0) {
     return { error, productName, productNumber, productDescription };
   }
-
-  return { succes: true, productName, productNumber, productDescription };
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+  const response = await fetch("https://dummyjson.com/products/add", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      title: productName,
+      price: productNumber,
+      description: productDescription,
+      /* other product data */
+    }),
+  });
+  console.log(response);
+  error.succes = response.ok;
+  return { error };
 };
